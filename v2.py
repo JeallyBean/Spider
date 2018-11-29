@@ -7,7 +7,7 @@ import chardet
 '''
 
 if __name__ == '__main__':
-    url = "https://blog.csdn.net/zhengyikuangge/article/details/71106778"
+    url = "http://www.baidu.com"
     rsp = urllib.request.urlopen(url)
     html = rsp.read()
 

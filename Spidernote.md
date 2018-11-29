@@ -18,4 +18,23 @@
     - geturl:返回请求对象的url
     - info:请求反馈
     - getcode:返回的http code
-    
+- request.date 的使用
+    - 访问网络的两种方法
+        - get: 
+            - 利用参数给服务器传递信息
+            - 参数为dict,然后用parse编码
+        -post: 
+            - 一般向服务器传递参数使用
+            - post是把信息加密处理
+            - 我们如果想使用post信息,需要用到data参数
+            - 使用post意味着http的头请求可能需要更改:
+            - urllib.parse.urlencode可以将字符串自动转化成上面的
+            - 为了更多的设置请求信息,单纯的通过urlopen函数已经不太好用了
+            - 需要利用request.Request 类(模拟一个请求的实体)
+- urllib.error
+    - URLError产生的原因:
+        - 没网
+        - 服务器连接失败
+        - 找不到指定服务器
+        - 本身是OSError的子类
+        -案例v7           
